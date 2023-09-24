@@ -729,8 +729,8 @@ body.dark .search-field i {
 
 @media (max-width: 580px) {
   .movie-item {
-    min-width: 175px;
-    height: 281px;
+    min-width: 160px;
+    height: 275px;
   }
   .movie-poster {
     height: 100%;

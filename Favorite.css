@@ -1,0 +1,772 @@
+@font-face {
+  font-family: "Header";
+  src: url(Fonts/Lobster-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Nosifer-";
+  src: url(Fonts/Nosifer-Regular.ttf);
+}
+/*-------------------------------Start Side Scroll------------------------------------------- */
+
+html {
+  scrollbar-width: normal;
+  scrollbar-color: #777 #0000002a;
+}
+
+html::-webkit-scrollbar {
+  width: 4px;
+  background-color: #02090d;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #7775;
+  border-radius: 18px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #777;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #5555;
+}
+
+html::-webkit-scrollbar-track:hover {
+  background-color: #555;
+}
+
+/*-----------------------------End Side Scroll------------------------------------------- */
+
+h3 {
+  color: var(--text-color);
+}
+/* ===== Google Font Import - Poppins ===== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* ===== Colours ===== */
+:root {
+  --body-color: #f7f8fa;
+  --nav-color: #17181c;
+  --side-nav: #17181c;
+  --text-color: #17181c;
+  --navtext-color: #ffffff96;
+  --search-bar: #f2f2f2;
+  --search-text: #17181c;
+  --movie-item-color: #ffffff;
+}
+
+body {
+  background-color: var(--body-color);
+}
+
+body.dark {
+  --body-color: #101010;
+  --nav-color: #17181c;
+  --side-nav: #17181c;
+  --text-color: #ffffff;
+  --text-color-nav: #ffffff96;
+  --search-bar: #242526;
+  --movie-item-color: transparent;
+}
+
+nav {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  background-color: var(--nav-color);
+  z-index: 100;
+}
+
+nav .nav-bar {
+  position: relative;
+  height: 100%;
+  max-width: 1570px;
+  width: 100%;
+  background-color: var(--nav-color);
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .nav-bar .sidebarOpen {
+  color: var(--navtext-color);
+  font-size: 25px;
+  padding: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+nav .nav-bar .logo a {
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--navtext-color);
+  text-decoration: none;
+}
+
+.menu .logo-toggle {
+  display: none;
+}
+
+.nav-bar .nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar .nav-links li {
+  margin: 0 20px;
+  list-style: none;
+}
+
+body > nav > div > div.menu > ul {
+  margin-bottom: 0;
+}
+
+.nav-links li a {
+  position: relative;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--navtext-color);
+  text-decoration: none;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 3px;
+}
+
+.nav-links li a::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: var(--navtext-color);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-links li:hover a::before {
+  opacity: 1;
+}
+
+.nav-bar .darkLight-searchBox {
+  display: flex;
+  align-items: center;
+}
+
+.darkLight-searchBox .dark-light,
+.darkLight-searchBox .searchToggle {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+}
+
+.dark-light i,
+.searchToggle i {
+  position: absolute;
+  color: var(--navtext-color);
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dark-light i.sun {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dark-light.active i.sun {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dark-light.active i.moon {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.searchToggle i.cancel {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.searchToggle.active i.cancel {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.searchToggle.active i.search {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.searchBox {
+  position: relative;
+}
+
+.searchBox .search-field {
+  position: absolute;
+  bottom: -85px;
+  right: 5px;
+  height: 50px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  background-color: var(--nav-color);
+  padding: 3px;
+  border-radius: 6px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.searchToggle.active ~ .search-field {
+  bottom: -74px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.search-field::before {
+  content: "";
+  position: absolute;
+  right: 14px;
+  top: -4px;
+  height: 12px;
+  width: 12px;
+  background-color: var(--nav-color);
+  transform: rotate(-45deg);
+  z-index: -1;
+}
+
+.search-field input {
+  height: 100%;
+  width: 100%;
+  padding: 0 45px 0 15px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--search-text);
+  background-color: var(--search-bar);
+}
+
+body.dark .search-field input {
+  color: var(--text-color);
+}
+
+.search-field i {
+  position: absolute;
+  color: var(--nav-color);
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+body.dark .search-field i {
+  color: var(--text-color);
+}
+
+@media (max-width: 1200px) {
+  nav .nav-bar .sidebarOpen {
+    display: block;
+  }
+
+  .menu {
+    position: fixed;
+    height: 100%;
+    width: 320px;
+    left: -100%;
+    top: 0;
+    padding: 20px;
+    background-color: var(--side-nav);
+    z-index: 100;
+    transition: all 0.4s ease;
+  }
+
+  nav.active .menu {
+    left: -0%;
+  }
+
+  nav.active .nav-bar .navLogo a {
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  .menu .logo-toggle {
+    display: block;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo-toggle .siderbarClose {
+    color: var(--navtext-color);
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .nav-bar .nav-links {
+    flex-direction: column;
+    padding-top: 30px;
+  }
+
+  .nav-links li a {
+    display: block;
+    margin-top: 20px;
+  }
+}
+.user-pic {
+  width: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 10px;
+  border: 2px solid rgb(46, 46, 46);
+}
+
+.sub-menu-wrap {
+  position: absolute;
+  top: 92%;
+  right: 0.5%;
+  width: 290px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.4s;
+  z-index: 1; /* Set a higher z-index to ensure the dropdown menu appears on top */
+}
+.sub-menu-wrap.open-menu {
+  max-height: 400px;
+}
+
+.sub-menu {
+  background: #17181cfb;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 18px;
+}
+
+.user-info {
+  position: relative;
+  font-family: "Konkhmer Sleokchher", cursive;
+  color: #fff;
+  word-spacing: 5px;
+}
+.user-info h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.user-info h3 {
+  font-weight: 500;
+}
+
+.user-info img {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  margin-right: 15px;
+  margin-left: 73px;
+}
+
+.sub-menu hr {
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background: #ccc;
+  margin: 15px 0 10px;
+}
+
+.sub-menu-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  margin: 12px 0;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+}
+
+.sub-menu-link p {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.sub-menu-link img {
+  width: 40px;
+  background: #e5e5e5;
+  border-radius: 50%;
+  padding: 8px;
+  margin-right: 15px;
+}
+.sub-menu-link span {
+  font-size: 22px;
+  transition: transform 0.5s;
+}
+.sub-menu-link:hover span {
+  transform: translateX(5px);
+}
+
+.sub-menu-link:hover p {
+  font-weight: 600;
+}
+
+.layout {
+  display: flex;
+}
+.dropdown {
+  position: relative;
+}
+
+#sortDropdownButton {
+  background-color: var(--body-color);
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+.side-filter {
+  width: 250px;
+  height: 100vh;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.content {
+  width: 100%;
+  flex-grow: 1;
+  padding-right: 50px;
+}
+.content h1 {
+  text-align: center;
+  color: var(--text-color);
+  margin-top: 12px;
+  margin-bottom: -30px;
+}
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.movie-item {
+  background: var(--movie-item-color);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(25%);
+  border-radius: 4px;
+  padding: 25px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+
+.movie-item:hover,
+.movie-item:focus,
+.movie-item:active {
+  box-shadow: 0 0 20 px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.movie-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.movie-poster {
+  width: 100%;
+  margin-bottom: 10px;
+  height: 350px; /* Set a fixed height for the movie posters */
+  object-fit: cover; /* Ensure the images maintain their aspect ratio and cover the container */
+}
+
+.movie-poster {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.movie-description {
+  font-size: 14px;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.movie-rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  width: 100%;
+  margin-left: 20%;
+}
+
+.movie-rating-text {
+  font-size: 14px;
+  color: var(--text-color);
+  flex: 1;
+  text-align: left;
+}
+
+.movie-year-text {
+  font-size: 14px;
+  color: var(--text-color);
+  flex: 1;
+  text-align: right;
+  margin-right: 25%;
+}
+
+.movie-actions {
+  display: flex;
+  align-items: center;
+}
+
+.movie-actions button {
+  background-color: #900d09;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  padding: 8px 40px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.movie-actions button:hover {
+  background-color: #0056b3;
+}
+
+.container-fluid {
+  background-color: var(--body-color);
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 10px;
+  }
+
+  .movie-list {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+/* ---------------------------------------------Start Side Bar Filters------------------------------------- */
+.sidebar {
+  font-size: 80%;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+.filter-title-general img {
+  margin-left: 20px;
+}
+.filter-title-general h1 {
+  color: var(--text-color);
+  font-size: 30px;
+}
+
+.sidebar .filter-group {
+  margin-bottom: 20px;
+}
+
+.sidebar .filter-title {
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.sidebar .filter-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.sidebar .filter-list li {
+  margin-bottom: 10px;
+}
+/* -----------------------------------------------Start Genre Filter------------------------------------- */
+.sidebar .filter-group .filter-list li label {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .filter-group .filter-label {
+  margin-left: 10px;
+  color: var(--text-color);
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.filter-title-general {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 25p;
+  align-items: center;
+}
+
+/* -----------------------------------------------End Genre Filter------------------------------------- */
+
+/* ------------------------------------------------Start Year Filter-------------------------------------- */
+.sidebar .filter-group .year-range-values {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .filter-group .year-range-values input {
+  width: 100%; /* Adjust the width to fill the container */
+  max-width: 200px; /* Limit the maximum width */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Add spacing between the boxes */
+}
+/* --------------------------------------------------End Year Filter--------------------------------------- */
+
+/* -------------------------------------------------Start Apply Button------------------------------------- */
+.glow-on-hover {
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #aaaaaa;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+/* -------------------------------------------------End Apply Button------------------------------------- */
+
+/* ---------------------------------------------End Side Bar Filters------------------------------------- */
+
+/* ----------------------------------------------Start Footer------------------------------------------------- */
+
+footer {
+  background-color: #101010; /* Set a light background color */
+  padding: 20px;
+  text-align: center;
+  color: #888787; /* Set the text color to be visible */
+}
+
+footer p {
+  margin: 0;
+}
+/* ----------------------------------------------End Footer------------------------------------------------- */
+
+/* ------------------------------------------Start Pagination------------------------------------------ */
+
+body > nav:nth-child(3) > ul {
+  margin-top: 25px;
+}
+/* Target the page link inside the pagination */
+.pagination .page-link {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  border: 1px solid #888787;
+}
+
+/* Target the "Previous" and "Next" buttons */
+.pagination .page-item.disabled .page-link {
+  background-color: var(--body-color);
+  color: var(--text-color);
+
+  border: 1px solid #888787;
+}
+
+/* Hover effect for the page links */
+.pagination .page-link:hover {
+  background-color: #900d09;
+  color: white;
+  border: 1px solid black;
+}
+
+/* Active page link */
+.pagination .page-item.active .page-link {
+  background-color: #900d09;
+  color: var(--text-color);
+  border: 1px solid black;
+}
+
+body > nav:nth-child(3) {
+  background-color: var(--body-color);
+}
+/* ------------------------------------------End Pagination------------------------------------------ */

@@ -1,0 +1,639 @@
+@font-face {
+  font-family: "Navbar";
+  src: url(Fonts/SFPRODISPLAYREGULAR.OTF);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  font-family: tahoma;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*-------------------------------Start Side Scroll------------------------------------------- */
+
+html {
+  scrollbar-width: normal;
+  scrollbar-color: #777 #0000002a;
+}
+
+html::-webkit-scrollbar {
+  width: 4px;
+  background-color: #02090d;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #7775;
+  border-radius: 18px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #777;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #5555;
+}
+
+html::-webkit-scrollbar-track:hover {
+  background-color: #555;
+}
+
+/*-----------------------------End Side Scroll------------------------------------------- */
+
+/*-------------------------------Start Top Nav------------------------------------------- */
+
+.logo {
+  position: absolute;
+  top: 1px;
+  left: 25px;
+  opacity: 85%;
+}
+
+.topnav {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  right: 1px;
+  align-items: center;
+}
+
+.topnav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between; /* Evenly space the elements */
+}
+
+.topnav li {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  margin-right: 95px;
+  font-family: "Navbar";
+  color: rgba(221, 219, 219, 0.8);
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.topnav li:hover {
+  color: #900d09;
+}
+.user-pic {
+  margin-right: 1.5rem;
+  margin-top: 1rem;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid rgb(46, 46, 46);
+}
+
+.sub-menu-wrap {
+  position: absolute;
+  top: 92%;
+  right: 0.5%;
+  width: 290px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.4s;
+  z-index: 1000; /* Set a higher z-index to ensure the dropdown menu appears on top */
+}
+.sub-menu-wrap.open-menu {
+  max-height: 400px;
+}
+
+.sub-menu {
+  background: #17181cfb;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 18px;
+}
+
+.user-info {
+  position: relative;
+  font-family: "Konkhmer Sleokchher", cursive;
+  color: #fff;
+  word-spacing: 5px;
+}
+.user-info h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.user-info h3 {
+  font-weight: 500;
+}
+
+.user-info img {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  margin-right: 15px;
+  margin-left: 73px;
+}
+
+.sub-menu hr {
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background: #ccc;
+  margin: 15px 0 10px;
+}
+
+.sub-menu-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  margin: 12px 0;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+}
+
+.sub-menu-link p {
+  width: 100%;
+  margin-bottom: 0;
+  font-size: 1.1rem;
+}
+
+.sub-menu-link img {
+  width: 40px;
+  background: #e5e5e5;
+  border-radius: 50%;
+  padding: 8px;
+  margin-right: 15px;
+}
+
+.sub-menu-link span {
+  font-size: 22px;
+  transition: transform 0.5s;
+}
+.sub-menu-link:hover span {
+  transform: translateX(5px);
+}
+
+.sub-menu-link:hover p {
+  font-weight: 600;
+}
+
+/*---------------------------------End Top Nav------------------------------------------- */
+
+body {
+  overflow-x: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+/*-----------------------------Start Home Section------------------------------------------- */
+
+#home {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: em;
+  color: #777;
+  background: #f9f9f9;
+  letter-spacing: 2px;
+  background-image: url("./images/Morbius.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.description {
+  width: auto;
+  position: absolute;
+  top: 12rem;
+  right: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.quote p {
+  font-size: 1.5rem;
+  color: #0f645d;
+  background: linear-gradient(to bottom, #0f645d, #6d0505);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.movie-name {
+  filter: brightness(80%);
+  max-width: 90%;
+  opacity: 80%;
+}
+
+.info {
+  display: flex;
+  width: 600px;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+
+.info p {
+  font-size: 1.5rem;
+  color: #859e9dd8;
+  font-family: "Navbar";
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.player {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 30rem;
+  margin-top: 25%;
+}
+
+.player img {
+  filter: invert(1);
+  opacity: 65%;
+  width: 25%;
+  cursor: pointer;
+}
+
+.player p {
+  margin-left: 35px;
+  color: #fff;
+  opacity: 75%;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Navbar";
+}
+
+@media (max-height: 750px) {
+  .player {
+    transform: scale(0.9);
+    margin-top: 7%;
+  }
+  .description {
+    top: 5.5rem;
+    right: 0.5rem;
+    transform: scale(0.85);
+  }
+  .movie-name {
+    width: 85%;
+    margin-left: 8%;
+  }
+  .topnav li {
+    margin-right: 70px;
+  }
+}
+
+/*-----------------------------End Home Section------------------------------------------- */
+
+/*-----------------------------Start About Section------------------------------------------- */
+
+#about {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: start;
+  font-size: 3em;
+  color: #777;
+  background: #f9f9f9;
+  letter-spacing: 2px;
+  background-image: url("./images/morbiusinfo.jpg");
+  background-size: cover;
+  background-position: top;
+}
+
+.about-container {
+  position: relative;
+  top: 1.5em;
+  left: 1.5em;
+  justify-content: start;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 2rem;
+  max-width: 50%;
+  min-height: 85vh;
+}
+
+.name-box h4 {
+  font-size: 1.95rem;
+  font-weight: bold;
+  color: #cccccc7e;
+  letter-spacing: 5px;
+  font-family: "Navbar";
+}
+
+.name-box h1 {
+  font-size: 8rem;
+  letter-spacing: 8px;
+  color: #ffffffd0;
+  font-family: "Navbar";
+  font-weight: 1000;
+}
+
+.pg {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.pg h5 {
+  font-size: 1.1rem;
+  border: 2px solid #cccccc7e;
+  padding: 2px 1.5px;
+  text-align: center;
+  color: #cccccc7e;
+}
+
+.pg p {
+  margin-left: 1rem;
+  font-size: 1.25rem;
+  letter-spacing: 3px;
+  max-width: 34em;
+  color: #cccccc7e;
+}
+
+#see-full-cast {
+  cursor: pointer;
+  color: #cccccc7e;
+}
+
+.movie-genre {
+  margin-top: 2rem;
+}
+.movie-genre p {
+  font-size: 1.25rem;
+  color: #cccccc7e;
+  letter-spacing: 4px;
+}
+
+.under-info {
+  margin-bottom: 1rem;
+}
+.movie-description {
+  margin-top: 12%;
+  max-width: 35rem;
+  height: 20rem;
+  padding: 1.5rem;
+}
+
+.movie-description p {
+  font-size: 1rem;
+  color: #ffffffd4;
+  text-transform: initial;
+  margin-top: 1rem;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+.movie-description .p1 {
+  margin: 0;
+}
+
+.wrapper {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: end;
+}
+
+.wrapper .card {
+  position: relative;
+  bottom: 6rem;
+  margin-right: 1rem;
+  /*   background: #ffffffb5;
+ */
+  width: calc(22% - 8px);
+  height: 250px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  /*   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+ */
+  scale: 0.85;
+}
+
+.wrapper .card .circle {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  cursor: default;
+}
+
+.card .circle .box,
+.card .circle .box span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.card .circle .box {
+  height: 100%;
+  width: 100%;
+  background: #ffffff00;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card .circle:hover .box {
+  transform: translate(-50%, -50%) scale(0.91);
+}
+
+.card .circle .box span,
+.wrapper .card .text {
+  background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.circle .box span {
+  font-size: 38px;
+  font-family: sans-serif;
+  font-weight: 600;
+  transform: translate(-45%, -50%);
+  transition: all 0.1s;
+}
+
+.card .circle .imdb-text {
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #ffffffd4;
+  transform: translateY(-50%);
+  text-align: center;
+  transition: all 0.1s;
+  margin: 0;
+  padding: 0;
+  margin-top: 7.5rem;
+  background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card .circle:hover .box span {
+  transform: translate(-45%, -45%) scale(1.09);
+}
+
+.card .text {
+  font-size: 20px;
+  font-weight: 600;
+}
+/*-----------------------------End About Section------------------------------------------- */
+
+#trailer {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #f9f9f9;
+}
+
+.video-container {
+  background: black;
+}
+
+#cast {
+  background-color: #02090d;
+}
+
+#captures {
+  background-color: #02090d;
+}
+
+.title-cast {
+  position: relative;
+  top: 1rem;
+}
+
+.title-cast h1 {
+  font-size: 3em;
+  text-align: center;
+}
+
+.sec {
+  min-height: 100vh;
+  color: #777;
+  background: #f9f9f9;
+  letter-spacing: 2px;
+}
+
+/*--------------------------Start Side Dot Nav------------------------------------------- */
+.navbar {
+  position: fixed;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li {
+  width: 200px;
+  position: relative;
+  text-align: right;
+}
+
+.navbar ul li .dot {
+  color: #fff;
+  display: block;
+  padding: 5px 0;
+}
+
+.navbar ul li .dot span {
+  display: inline-block;
+  background: #900d09;
+  letter-spacing: 1px;
+  padding: 10px 25px;
+  margin-right: 30px;
+  border-radius: 3px;
+  transform: translateX(30px);
+  opacity: 0;
+}
+
+.navbar ul li:hover .dot span {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.navbar ul li .dot span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(7px, -50%);
+  border-left: 7px solid #900d09;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  display: block;
+}
+
+.navbar ul li .dot::before,
+.navbar ul li .dot::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  display: block;
+  transition: 0.2s ease-out;
+}
+
+.navbar ul li .dot::before {
+  height: 5px;
+  width: 5px;
+  border: 2px solid #333;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.navbar ul li .dot.active::before,
+.navbar ul li:hover .dot::before {
+  border-color: #900d09;
+  background: #900d09;
+}
+
+.navbar ul li .dot::after {
+  height: 15px;
+  width: 15px;
+  border: 2px solid #900d09;
+  right: -5px;
+  transform: translateY(-50%) scale(0);
+}
+
+.navbar ul li .dot.active::after,
+.navbar ul li:hover .dot::after {
+  transform: translateY(-50%) scale(1);
+}
+
+/*----------------------------End Side Dot Nav------------------------------------------- */

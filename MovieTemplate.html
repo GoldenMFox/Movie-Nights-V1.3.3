@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <!-- Swiper  -->
+
+    <link rel="stylesheet" href="MovieTemplateStyle.css" />
+    <title>Movie Template Page</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-bar">
+        <i class="bx bx-menu sidebarOpen"></i>
+        <span class="logo navLogo"
+          ><a href="index.html">
+            <img src="./images/Logo/Logo.png" height="30" /> </a
+        ></span>
+
+        <div class="menu">
+          <div class="logo-toggle">
+            <span class="logo"
+              ><a href="#"> <img src="./images/Logo/Logo.png" height="30" /> </a
+            ></span>
+            <i class="bx bx-x siderbarClose"></i>
+          </div>
+
+          <ul class="nav-links">
+            <li>
+              <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+            </li>
+            <li>
+              <a href="MoviePage.html"
+                ><i class="fa-solid fa-film"></i>Movies</a
+              >
+            </li>
+            <li>
+              <a href="TV-Show.html"><i class="fa-solid fa-tv"></i>TV-Shows</a>
+            </li>
+            <li>
+              <a href="Anime.html"
+                ><i class="fa-solid fa-clapperboard"></i>Anime</a
+              >
+            </li>
+            <li>
+              <a href="Favorite.html">
+                <i class="fa-solid fa-star"></i>Favorite</a
+              >
+            </li>
+            <li>
+              <a href="Favorite.html">
+                <i class="fa-regular fa-clipboard"></i>Watchlist</a
+              >
+            </li>
+            <li>
+              <a href="TierList.html"
+                ><i class="fa-solid fa-ranking-star"></i>Tier List</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="darkLight-searchBox">
+          <div class="dark-light">
+            <i class="bx bx-moon moon"></i>
+            <i class="bx bx-sun sun"></i>
+          </div>
+
+          <div class="searchBox">
+            <div class="searchToggle">
+              <i class="bx bx-x cancel"></i>
+              <i class="bx bx-search search"></i>
+            </div>
+
+            <div class="search-field">
+              <input type="text" placeholder="Search..." />
+              <i class="bx bx-search"></i>
+            </div>
+          </div>
+          <img
+            src="images/UserProfile.jpg"
+            class="user-pic"
+            onclick="toggleMenu()"
+          />
+          <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+              <div class="user-info">
+                <img src="images/UserProfile.jpg" />
+                <div class="username">
+                  <h2>Mirzac Nicolae</h2>
+                </div>
+              </div>
+              <hr />
+
+              <a href="ProfilePage.html" class="sub-menu-link">
+                <img src="profile-menu-img/profile.png" />
+                <p>Profile</p>
+                <span>></span>
+              </a>
+              <a href="#" class="sub-menu-link">
+                <img src="profile-menu-img/setting.png" />
+                <p>Setting</p>
+                <span>></span>
+              </a>
+              <a href="#" class="sub-menu-link">
+                <img src="profile-menu-img/logout.png" />
+                <p>Logout</p>
+                <span>></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="slice">
+      <div class="overlay"></div>
+      <div class="inside-slice">
+        <div class="container">
+          <div class="image-container"></div>
+          <div class="about-container">
+            <div class="title-box">
+              <div class="title-line">
+                <div class="movie-name">
+                  <h1>Oppenhimer</h1>
+                </div>
+                <div class="year">
+                  <h2>(2023)</h2>
+                </div>
+              </div>
+              <div class="sub-name-info">
+                <div class="sub-name-info-line">
+                  <div class="age">
+                    <p>15A</p>
+                  </div>
+                  <div class="release">
+                    <p>07/21/2023 (IE)</p>
+                  </div>
+                  <div class="genre">
+                    <p>Drama, History</p>
+                  </div>
+                  <div class="duration">
+                    <p>3h 1min</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="function-box">
+              <div class="wrapper">
+                <div class="card">
+                  <div class="circle" id="progress-bar">
+                    <div class="bar"></div>
+                    <div class="box">
+                      <span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="imdb">
+                <p>
+                  IMDB <br />
+                  Score
+                </p>
+              </div>
+
+              <div class="wrapper-pers">
+                <div class="card">
+                  <div class="circle-pers" id="progress-bar">
+                    <div class="bar"></div>
+                    <div class="box">
+                      <span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="imdb">
+                <p>
+                  Pers. <br />
+                  Score
+                </p>
+              </div>
+              <div class="function-icons">
+                <div class="action-circle">
+                  <a href="#" class="icon AddFavorite">
+                    <div class="tooltip">Add to Favorite</div>
+                    <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+                  </a>
+                  <a href="#" class="icon RateIt">
+                    <div class="tooltip">Rate It</div>
+                    <span><i class="fa-solid fa-star"></i></span>
+                  </a>
+                  <a href="#" class="icon watchlist">
+                    <div class="tooltip">Add to Watchlist</div>
+                    <span><i class="bx bx-list-plus"></i></span>
+                  </a>
+                </div>
+              </div>
+              <div class="youtube-overlay">
+                <div class="youtube-player-popup">
+                  <iframe
+                    src="https://www.youtube.com/embed/uYPbbksJxIg"
+                    title="Oppenheimer | New Trailer"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+              <div class="playTrailer">
+                <i class="fa-solid fa-play" style="color: #ffffff"></i>
+                <h3>Play Trailer</h3>
+              </div>
+            </div>
+            <div class="overview">
+              <div class="overview-title">
+                <h4>Overview</h4>
+              </div>
+              <div class="overview-description">
+                <p>
+                  Oppenheimer is a biographical drama film about J. Robert
+                  Oppenheimer, the scientist who led the Manhattan Project to
+                  develop the atomic bomb during World War II. The film explores
+                  the moral and ethical dilemmas that Oppenheimer faced as he
+                  witnessed the destruction caused by his creation. It is a
+                  story of both triumph and tragedy, as Oppenheimer grapples
+                  with the immense power he has unleashed into the world.
+                </p>
+              </div>
+              <div class="director-box">
+                <div class="director-name">
+                  <p>Christopher Nolan</p>
+                </div>
+                <div class="director">
+                  <p>Director, Writer</p>
+                </div>
+              </div>
+            </div>
+            <div class="distributor">
+              <div class="distributor-list">
+                <div class="distributor-item">
+                  <img
+                    src="https://www.justwatch.com/images/icon/207360008/s100/icon.webp"
+                  />
+                </div>
+                <div class="distributor-item">
+                  <img src="https://images.justwatch.com/icon/147638351/s100" />
+                </div>
+                <div class="distributor-item">
+                  <img src="https://images.justwatch.com/icon/190848813/s100" />
+                </div>
+                <div class="distributor-item">
+                  <img
+                    src="https://images.justwatch.com/icon/303391391/s100/icon.webp"
+                  />
+                </div>
+                <!--   <div class="distributor-item">
+                  <img src="https://images.justwatch.com/icon/52449861/s100" />
+                </div>
+
+                <div class="distributor-item">
+                  <img src="https://images.justwatch.com/icon/242706661/s100" />
+                </div>
+                <div class="distributor-item">
+                  <img src="https://images.justwatch.com/icon/127445869/s100" />
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-container">
+      <div class="stats-container-inside">
+        <div class="stats-box first">
+          <div class="stats-name">
+            <i class="fa-solid fa-calendar-days"></i>
+            <h2>Status:</h2>
+          </div>
+          <div class="stats-out">
+            <h2>Released</h2>
+          </div>
+        </div>
+        <div class="stats-box">
+          <div class="stats-name">
+            <i class="fa-solid fa-globe"></i>
+            <h2>Original Language:</h2>
+          </div>
+          <div class="stats-out">
+            <h2>English</h2>
+          </div>
+        </div>
+        <div class="stats-box">
+          <div class="stats-name">
+            <i class="fa-solid fa-money-bill"></i>
+            <h2>Budget:</h2>
+          </div>
+          <div class="stats-out">
+            <h2>$100,000,000.00</h2>
+          </div>
+        </div>
+        <div class="stats-box last">
+          <div class="stats-name">
+            <i class="bx bxs-bank"></i>
+            <h2>Revenue:</h2>
+          </div>
+          <div class="stats-out">
+            <h2>$683,241,751.00</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cast-container">
+      <div class="cast-title">
+        <h1>Cast & Crew</h1>
+      </div>
+      <div class="cast-list">
+        <div class="cast-box">
+          <div class="cast-image-container">
+            <img src=".//images/Cast/cast-murphy.jpg" />
+          </div>
+          <div class="cast-name">
+            <i class="bx bx-male-sign"></i>
+            <h3>Cillian Murphy</h3>
+          </div>
+        </div>
+        <div class="cast-box">
+          <div class="cast-image-container">
+            <img src=".//images/Cast/emily.jpg" />
+          </div>
+          <div class="cast-name">
+            <i class="bx bx-female-sign"></i>
+            <h3>Emily Blunt</h3>
+          </div>
+        </div>
+        <div class="cast-box">
+          <div class="cast-image-container">
+            <img src=".//images/Cast/rdjr.jpg" />
+          </div>
+          <div class="cast-name">
+            <i class="bx bx-male-sign"></i>
+            <h3>Robert Downey Jr.</h3>
+          </div>
+        </div>
+        <div class="cast-box">
+          <div class="cast-image-container">
+            <img src=".//images/Cast/mat.jpg" />
+          </div>
+          <div class="cast-name">
+            <i class="bx bx-male-sign"></i>
+            <h3>Matt Damon</h3>
+          </div>
+        </div>
+        <div class="cast-box">
+          <div class="cast-image-container">
+            <img src=".//images/Cast/florence.jpg" />
+          </div>
+          <div class="cast-name">
+            <i class="bx bx-female-sign"></i>
+            <h3>Florence Pugh</h3>
+          </div>
+        </div>
+        <div class="cast-box">
+          <div class="cast-image-container">
+            <img src=".//images/Cast/ramy.jpg" />
+          </div>
+          <div class="cast-name">
+            <i class="bx bx-male-sign"></i>
+            <h3>Rami Malek</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="recomandation-container">
+      <h1>Recommendations</h1>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/Landscape/avatar.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/Landscape/luci.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/Landscape/one.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/Landscape/nun.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/Landscape/galaxy.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/Landscape/bluebittle.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/Landscape/extr.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/Landscape/after.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/Landscape/spider.jpg" alt="" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+
+    <script src="./JS/progressCirclePublic.js"></script>
+
+    <script src="./JS/progressCirclePersonal.js"></script>
+
+    <script src="./JS/darkMode.js"></script>
+
+    <script src="./JS/profileMenuDropdown.js"></script>
+
+    <script src="./JS/youtubeOverlay.js"></script>
+
+    <script src="./JS/iconFunctions.js"></script>
+
+    <script src="./JS/ratingSystem.js"></script>
+
+    <script src="./JS/ratingPopUp.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 15,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+  </body>
+  <footer class="footer">
+    <div class="footer-container">
+      <p>
+        &copy; 2023 MovieNights by Mirzac Nicolae & Alexandru Donoaga. All
+        rights reserved.
+      </p>
+      <p></p>
+      <p><a href="#">Terms of Service</a></p>
+    </div>
+  </footer>
+</html>

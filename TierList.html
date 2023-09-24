@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="TierListStyle.css" />
+    <title>TierList</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-bar">
+        <i class="bx bx-menu sidebarOpen"></i>
+        <span class="logo navLogo"
+          ><a href="index.html">
+            <img src="./images/Logo/Logo.png" height="30" /> </a
+        ></span>
+
+        <div class="menu">
+          <div class="logo-toggle">
+            <span class="logo"
+              ><a href="#"> <img src="./images/Logo/Logo.png" height="30" /> </a
+            ></span>
+            <i class="bx bx-x siderbarClose"></i>
+          </div>
+
+          <ul class="nav-links">
+            <li>
+              <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+            </li>
+            <li>
+              <a href="MoviePage.html"
+                ><i class="fa-solid fa-film"></i>Movies</a
+              >
+            </li>
+            <li>
+              <a href="TV-Show.html"><i class="fa-solid fa-tv"></i>TV-Shows</a>
+            </li>
+            <li>
+              <a href="Anime.html"
+                ><i class="fa-solid fa-clapperboard"></i>Anime</a
+              >
+            </li>
+            <li>
+              <a href="Favorite.html">
+                <i class="fa-solid fa-star"></i>Favorite</a
+              >
+            </li>
+            <li>
+              <a href="Watchlist.html">
+                <i class="fa-regular fa-clipboard"></i>Watchlist</a
+              >
+            </li>
+            <li>
+              <a href="TierList.html"
+                ><i class="fa-solid fa-ranking-star"></i>Tier List</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="darkLight-searchBox">
+          <div class="dark-light">
+            <i class="bx bx-moon moon"></i>
+            <i class="bx bx-sun sun"></i>
+          </div>
+
+          <div class="searchBox">
+            <div class="searchToggle">
+              <i class="bx bx-x cancel"></i>
+              <i class="bx bx-search search"></i>
+            </div>
+
+            <div class="search-field">
+              <input type="text" placeholder="Search..." />
+              <i class="bx bx-search"></i>
+            </div>
+          </div>
+          <img
+            src="images/UserProfile.jpg"
+            class="user-pic"
+            onclick="toggleMenu()"
+          />
+          <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+              <div class="user-info">
+                <img src="images/UserProfile.jpg" />
+                <div class="username">
+                  <h2>Mirzac Nicolae</h2>
+                </div>
+              </div>
+              <hr />
+
+              <a href="ProfilePage.html" class="sub-menu-link">
+                <img src="./Images/Icons/profile-menu-img/profile.png" />
+                <p>Profile</p>
+                <span>></span>
+              </a>
+              <a href="#" class="sub-menu-link">
+                <img src="./Images/Icons/profile-menu-img/setting.png" />
+                <p>Setting</p>
+                <span>></span>
+              </a>
+              <a href="ContactUs.html" class="sub-menu-link">
+                <img src="./Images/Icons/profile-menu-img/contact.png" />
+                <p>Contact Us</p>
+                <span>></span>
+              </a>
+              <a href="#" class="sub-menu-link">
+                <img src="./Images/Icons/profile-menu-img/logout.png" />
+                <p>Logout</p>
+                <span>></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="work">
+      <h1>Work in progress</h1>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <p>
+          &copy; 2023 MovieNights by Mirzac Nicolae & Alexandru Donoaga. All
+          rights reserved.
+        </p>
+        <p></p>
+        <p><a href="#">Terms of Service</a></p>
+      </div>
+    </footer>
+
+    <!-- sort by dropdown menu -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./JS/darkMode.js"></script>
+
+    <script src="./JS/spotlightEffect.js"></script>
+
+    <script src="./JS/typingEffect.js"></script>
+
+    <script src="./JS/indexYT.js"></script>
+
+    <script src="./JS/iconFunctions.js"></script>
+
+    <script src="./JS/ratingSystem.js"></script>
+
+    <script src="./JS/ratingPopUp.js"></script>
+
+    <script src="./JS/filterSidebar.js"></script>
+  </body>
+</html>

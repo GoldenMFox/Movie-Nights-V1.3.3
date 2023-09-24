@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Ranking and Rating Website...</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-bar">
+        <i class="bx bx-menu sidebarOpen"></i>
+        <span class="logo navLogo"
+          ><a href="index.html">
+            <img src="./images/Logo/Logo.png" height="30" /> </a
+        ></span>
+
+        <div class="menu">
+          <div class="logo-toggle">
+            <span class="logo"
+              ><a href="#"> <img src="./images/Logo/Logo.png" height="30" /> </a
+            ></span>
+            <i class="bx bx-x siderbarClose"></i>
+          </div>
+
+          <ul class="nav-links">
+            <li>
+              <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+            </li>
+            <li>
+              <a href="MoviePage.html"
+                ><i class="fa-solid fa-film"></i>Movies</a
+              >
+            </li>
+            <li>
+              <a href="TV-Show.html"><i class="fa-solid fa-tv"></i>TV-Shows</a>
+            </li>
+            <li>
+              <a href="Anime.html"
+                ><i class="fa-solid fa-clapperboard"></i>Anime</a
+              >
+            </li>
+            <li>
+              <a href="Favorite.html">
+                <i class="fa-solid fa-star"></i>Favorite</a
+              >
+            </li>
+            <li>
+              <a href="TierList.html"
+                ><i class="fa-solid fa-ranking-star"></i>Tier List</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="darkLight-searchBox">
+          <div class="dark-light">
+            <i class="bx bx-moon moon"></i>
+            <i class="bx bx-sun sun"></i>
+          </div>
+
+          <div class="searchBox">
+            <div class="searchToggle">
+              <i class="bx bx-x cancel"></i>
+              <i class="bx bx-search search"></i>
+            </div>
+
+            <div class="search-field">
+              <input type="text" placeholder="Search..." />
+              <i class="bx bx-search"></i>
+            </div>
+          </div>
+          <img
+            src="images/UserProfile.jpg"
+            class="user-pic"
+            onclick="toggleMenu()"
+          />
+          <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+              <div class="user-info">
+                <img src="images/UserProfile.jpg" />
+                <div class="username">
+                  <h2>Mirzac Nicolae</h2>
+                </div>
+              </div>
+              <hr />
+
+              <a href="ProfilePage.html" class="sub-menu-link">
+                <img src="./Images/Icons/profile-menu-img/profile.png" />
+                <p>Profile</p>
+                <span>></span>
+              </a>
+              <a href="#" class="sub-menu-link">
+                <img src="./Images/Icons/profile-menu-img/setting.png" />
+                <p>Setting</p>
+                <span>></span>
+              </a>
+              <a href="ContactUs.html" class="sub-menu-link">
+                <img src="./Images/Icons/profile-menu-img/contact.png" />
+                <p>Contact Us</p>
+                <span>></span>
+              </a>
+              <a href="#" class="sub-menu-link">
+                <img src="./Images/Icons/profile-menu-img/logout.png" />
+                <p>Logout</p>
+                <span>></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div
+        id="carouselDark"
+        class="carousel carousel-dark slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselDark"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselDark"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselDark"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselDark"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="8000">
+            <img
+              src="images/Landscape/bluebittle.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+          <div class="carousel-item" data-bs-interval="8000">
+            <img
+              src="images/Landscape/shawschank.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/Landscape/green.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+          <div class="carousel-item" data-bs-interval="8000">
+            <img
+              src="images/Landscape/got.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselDark"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselDark"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <h1>Top Rated Movies</h1>
+
+      <div id="movie-list">
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/openhimer.jpg "
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">
+              <a href="MovieTemplate.html">Oppenhimer</a>
+            </h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 10.0</span>
+              </div>
+              <span class="movie-year-text">2023</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="#" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="rating">
+          <div class="big-star">
+            <i class="fa-solid fa-star"></i>
+            <p class="selected-rating"></p>
+          </div>
+          <h3>Rate the Movie</h3>
+          <ul class="stars">
+            <li class="star" data-value="1">
+              <i class="fa-solid fa-star"></i>
+            </li>
+            <li class="star" data-value="2">
+              <i class="fa-solid fa-star"></i>
+            </li>
+            <li class="star" data-value="3">
+              <i class="fa-solid fa-star"></i>
+            </li>
+            <li class="star" data-value="4">
+              <i class="fa-solid fa-star"></i>
+            </li>
+            <li class="star" data-value="5">
+              <i class="fa-solid fa-star"></i>
+            </li>
+            <li class="star" data-value="6">
+              <i class="fa-solid fa-star"></i>
+            </li>
+            <li class="star" data-value="7">
+              <i class="fa-solid fa-star"></i>
+            </li>
+            <li class="star" data-value="8">
+              <i class="fa-solid fa-star"></i>
+            </li>
+            <li class="star" data-value="9">
+              <i class="fa-solid fa-star"></i>
+            </li>
+            <li class="star" data-value="10">
+              <i class="fa-solid fa-star"></i>
+            </li>
+          </ul>
+          <p class="feedback-message"></p>
+          <button id="btn" type="button">Submit Rating</button>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/Forrest.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Forest Gump</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 10.0</span>
+              </div>
+              <span class="movie-year-text">1994</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more movie items as needed -->
+      </div>
+      <div class="youtube-overlay">
+        <div class="youtube-player-popup">
+          <iframe
+            src="https://www.youtube.com/embed/uYPbbksJxIg"
+            title="Oppenheimer | New Trailer"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <p>
+          &copy; 2023 MovieNights by Mirzac Nicolae & Alexandru Donoaga. All
+          rights reserved.
+        </p>
+        <p></p>
+        <p><a href="#">Terms of Service</a></p>
+      </div>
+    </footer>
+
+    <!-- carusell functionality -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./JS/profileMenuDropdown.js"></script>
+
+    <script src="./JS/darkMode.js"></script>
+
+    <script src="./JS/spotlightEffect.js"></script>
+
+    <script src="./JS/typingEffect.js"></script>
+
+    <script src="./JS/indexYT.js"></script>
+
+    <script src="./JS/iconFunctions.js"></script>
+
+    <script src="./JS/ratingSystem.js"></script>
+  </body>
+</html>

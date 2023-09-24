@@ -1,0 +1,2591 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Watchlist</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="WatchlistStyle.css" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-bar">
+        <i class="bx bx-menu sidebarOpen"></i>
+        <span class="logo navLogo"
+          ><a href="index.html">
+            <img src="./images/Logo/Logo.png" height="30" /> </a
+        ></span>
+
+        <div class="menu">
+          <div class="logo-toggle">
+            <span class="logo"
+              ><a href="#"> <img src="./images/Logo/Logo.png" height="30" /> </a
+            ></span>
+            <i class="bx bx-x siderbarClose"></i>
+          </div>
+
+          <ul class="nav-links">
+            <li>
+              <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+            </li>
+            <li>
+              <a href="MoviePage.html"
+                ><i class="fa-solid fa-film"></i>Movies</a
+              >
+            </li>
+            <li>
+              <a href="TV-Show.html"><i class="fa-solid fa-tv"></i>TV-Shows</a>
+            </li>
+            <li>
+              <a href="Anime.html"
+                ><i class="fa-solid fa-clapperboard"></i>Anime</a
+              >
+            </li>
+            <li>
+              <a href="Favorite.html">
+                <i class="fa-solid fa-star"></i>Favorite</a
+              >
+            </li>
+            <li>
+              <a href="Favorite.html">
+                <i class="fa-regular fa-clipboard"></i>Watchlist</a
+              >
+            </li>
+            <li>
+              <a href="TierList.html"
+                ><i class="fa-solid fa-ranking-star"></i>Tier List</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="darkLight-searchBox">
+          <div class="dark-light">
+            <i class="bx bx-moon moon"></i>
+            <i class="bx bx-sun sun"></i>
+          </div>
+
+          <div class="searchBox">
+            <div class="searchToggle">
+              <i class="bx bx-x cancel"></i>
+              <i class="bx bx-search search"></i>
+            </div>
+
+            <div class="search-field">
+              <input type="text" placeholder="Search..." />
+              <i class="bx bx-search"></i>
+            </div>
+          </div>
+          <img
+            src="images/UserProfile.jpg"
+            class="user-pic"
+            onclick="toggleMenu()"
+          />
+          <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+              <div class="user-info">
+                <img src="images/UserProfile.jpg" />
+                <div class="username">
+                  <h2>Mirzac Nicolae</h2>
+                </div>
+              </div>
+              <hr />
+
+              <a href="ProfilePage.html" class="sub-menu-link">
+                <img src="./Images/Icons/profile-menu-img/profile.png" />
+                <p>Profile</p>
+                <span>></span>
+              </a>
+              <a href="#" class="sub-menu-link">
+                <img src="./Images/Icons/profile-menu-img/setting.png" />
+                <p>Setting</p>
+                <span>></span>
+              </a>
+              <a href="ContactUs.html" class="sub-menu-link">
+                <img src="./Images/Icons/profile-menu-img/contact.png" />
+                <p>Contact Us</p>
+                <span>></span>
+              </a>
+              <a href="#" class="sub-menu-link">
+                <img src="./Images/Icons/profile-menu-img/logout.png" />
+                <p>Logout</p>
+                <span>></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>WATCHLIST</h1>
+      <div class="watchlists">
+        <div class="lists">
+          <ul class="watchlist-select">
+            <li>
+              <i class="fa-solid fa-globe"></i><a href="#">My Watchlist</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-clock-rotate-left"></i
+              ><a href="#">Continue Watch</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-clock"></i><a href="#">Plan to Watch</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i><a href="#">Completed</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="movie-list">
+        <div class="movie-item" data-movie-id="1">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">
+              <a href="MovieTemplate.html">Oppenhimer</a>
+            </h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 9.2</span>
+              </div>
+              <span class="movie-year-text">2023</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="#" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="rating-overlay">
+          <div class="rating-player-popup">
+            <div class="rating">
+              <span class="close-icon">
+                <i class="fa-regular fa-circle-xmark"></i>
+              </span>
+              <div class="big-star">
+                <i class="fa-solid fa-star"></i>
+                <p class="selected-rating"></p>
+              </div>
+              <h3>Rate the Movie</h3>
+              <ul class="stars">
+                <li class="star" data-value="1">
+                  <i class="fa-solid fa-star"></i>
+                </li>
+                <li class="star" data-value="2">
+                  <i class="fa-solid fa-star"></i>
+                </li>
+                <li class="star" data-value="3">
+                  <i class="fa-solid fa-star"></i>
+                </li>
+                <li class="star" data-value="4">
+                  <i class="fa-solid fa-star"></i>
+                </li>
+                <li class="star" data-value="5">
+                  <i class="fa-solid fa-star"></i>
+                </li>
+                <li class="star" data-value="6">
+                  <i class="fa-solid fa-star"></i>
+                </li>
+                <li class="star" data-value="7">
+                  <i class="fa-solid fa-star"></i>
+                </li>
+                <li class="star" data-value="8">
+                  <i class="fa-solid fa-star"></i>
+                </li>
+                <li class="star" data-value="9">
+                  <i class="fa-solid fa-star"></i>
+                </li>
+                <li class="star" data-value="10">
+                  <i class="fa-solid fa-star"></i>
+                </li>
+              </ul>
+              <p class="feedback-message"></p>
+              <button id="btn" type="button">Submit Rating</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item" data-movie-id="2">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/kbHlxmkVKDQrBXrKkh0nuIr4rSZ.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Forest Gump</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 10.0</span>
+              </div>
+              <span class="movie-year-text">1994</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item" data-movie-id="3">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">The Shawshank Redemption</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 10.0</span>
+              </div>
+              <span class="movie-year-text">1994</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/mGK4FCfdJ3qUi848RcrheqdRsPk.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">The Green Mile</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 9.9</span>
+              </div>
+              <span class="movie-year-text">1999</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/7lLJgKnAicAcR5UEuo8xhSMj18w.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Cast Away</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB Score: 9.5</span>
+              </div>
+              <span class="movie-year-text">2000</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/kUJDlvh4pLqNwMRT8Q4aHjgb7zq.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">The Truman Show</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 10.0</span>
+              </div>
+              <span class="movie-year-text">1998</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/bnidwEvWNAVJ3Uco9wWtuzWAfrx.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Identity</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 9.7</span>
+              </div>
+              <span class="movie-year-text">2003</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/pgbwTUnWj0qOlYx05QaarApvohX.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">The Imitation Game</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 9.8</span>
+              </div>
+              <span class="movie-year-text">2014</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/t1YRKOLOzreHuBzu2Rc7LeHMzdV.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Room 1408</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 9.0</span>
+              </div>
+              <span class="movie-year-text">2007</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/c4UgUKZjM0Qzy5t4hAXSOFHYsnb.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">The Mist</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 9.0</span>
+              </div>
+              <span class="movie-year-text">2007</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/lZ2sOCMCcGaPppaXj0Wiv0S7A08.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Blue Beetle</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 9.3</span>
+              </div>
+              <span class="movie-year-text">2023</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/6HpicbiT7xmlMjQXOSCeNoLZGpf.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">The Ruins</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 8.3</span>
+              </div>
+              <span class="movie-year-text">2008</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/qcF8qt8toajvQllOMVRCUqZCxjV.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Armageddon</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 8.8</span>
+              </div>
+              <span class="movie-year-text">1998</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/8Im6DknDVxRiGXc5t8rVOJyzuNx.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Haunted Mansion</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 6.9</span>
+              </div>
+              <span class="movie-year-text">2023</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/el8RGlODqenqIs6Mcbyaog6DnXe.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">The Girl Next Door</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 9.3</span>
+              </div>
+              <span class="movie-year-text">2004</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/sV3kIAmvJ9tPz4Lq5fuf9LLMxte.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">From Dusk Till Dawn</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 8.5</span>
+              </div>
+              <span class="movie-year-text">1996</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/j5mxLNWjUlXUUk8weFBtnF4afIR.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">The Rock</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 9.4</span>
+              </div>
+              <span class="movie-year-text">1996</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/E6mwyjpjvQISbUDYCTVg50rJyl.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">I See You</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 8.5</span>
+              </div>
+              <span class="movie-year-text">2019</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/yuNs09hvpHVU1cBTCAk9zxsL2oW.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Memento</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 8.9</span>
+              </div>
+              <span class="movie-year-text">2000</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/p8g1vlTvpM6nr2hMMiZ1fUlKF0D.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">The Others</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 7.5</span>
+              </div>
+              <span class="movie-year-text">2001</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/uVwFvumti17TG8ie6DVsgazfqNv.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Face/Off</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 9.2</span>
+              </div>
+              <span class="movie-year-text">1997</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/pNb7t1baCexHxPITEKpR1wkFMrw.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Swordfish</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 9.5</span>
+              </div>
+              <span class="movie-year-text">2001</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/bEp3IMeb1pNgDvI1MPiawzqm58P.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Heat</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 7.5</span>
+              </div>
+              <span class="movie-year-text">1995</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/mxFPI4KYBk5ri9cPteIS8jiDFgj.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">The Descent</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 6.5</span>
+              </div>
+              <span class="movie-year-text">2005</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/zAI4e30LF6dt5Z1awyjLgZLpKBe.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Fight Club</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 8.7</span>
+              </div>
+              <span class="movie-year-text">1999</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/qo5Ifam64rDlp4oprXGhK5X0qIs.jpg"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Gone in Sixty Seconds</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 9.9</span>
+              </div>
+              <span class="movie-year-text">2000</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/zDWWXoekRzssD20LdG7b7nAv1pD.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">GoodFellas</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 9.8</span>
+              </div>
+              <span class="movie-year-text">1990</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/hMTncCsOwZZCNOo5SBhE1wQKpid.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">The Godfather</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">1997</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/x7Ry5Mooi19TOqKbQLxImGepx8r.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Con Air</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 9.9</span>
+              </div>
+              <span class="movie-year-text">1997</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/bez5a2RfXPLIi7A5KZMU0ufYiTw.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">The Hurricane</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">1999</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/yMOjoGNIJ0on7Jm1BlJWKvpPAEL.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Crimson Tide</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">1995</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/xtKLvpOfARi1XVm8u2FTdhY5Piq.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Donnie Brasco</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">1997</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/nQKJuzaVksYFwyd0fVFWOL5CMN7.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Mrs. Doubtfire</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">1993</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/oYUZHYMwNKnE1ef4WE5Hw2a9OAY.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Apollo 13</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">1995</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/5BHuvQ6p9kfc091Z8RiFNhCwL4b.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">The Martian</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 10.0</span>
+              </div>
+              <span class="movie-year-text">2015</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/7L0HJUnoSCpPsnjvPEsvGDdESIu.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Contact</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 9.5</span>
+              </div>
+              <span class="movie-year-text">1997</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/8PRVIfZzDgw8EV3sDWJ6NA1ZMAn.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Dante's Peak</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">1997</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/eOFjZMYYx9T8JuV0gm2ezEw0rdl.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">The Fugitive</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">1993</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/k62LisG7J56LBQpCYvbO7NQNQyI.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Total Recall</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">1990</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/pxWuGsyzVQSqHWxVQLy4XUcopIL.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Demolition Man</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">1993</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/5HJEPkl4XOppUZA6yPtwUL2YDCT.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Assassins</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">1995</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/9XsDarmDerTO5qAU9enp1Jxc8On.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Executive Decision</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">1996</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/omw7K0L6qArF87zv7qDjjVysyev.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Daylight</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">1996</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/yTfjHPqh7C7bkfMtEKx2mPdorQw.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Last Action Hero</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 9.5</span>
+              </div>
+              <span class="movie-year-text">1993</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/3NvOFpmyECI3DNExYMtFIRcGMsu.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">In the Line of Fire</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">1993</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/w440_and_h660_face/rrYKZV381sQJ7NV7qbmTkDaMW4V.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Lethal Weapon</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">1987</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/Apu3Ecg11bIEEiKLnbhagGtWNg7.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Speed</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 9.4</span>
+              </div>
+              <span class="movie-year-text">1994</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/mrS7x2JzbeGhG3JnH5cTfps4O0h.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Point Break</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 9.1</span>
+              </div>
+              <span class="movie-year-text">1990</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/cJDHDemIRYda7dHs9Rsw7FxRMvb.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">The Devil's Advocate</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 9.4</span>
+              </div>
+              <span class="movie-year-text">1997</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/yhhfjyv8d8GIPuBScilgb6IANZi.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">The Sixth Sense</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">1999</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/cYKszbvn7Gj3DjNqApGKAMHSFkc.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Constantine</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 9.5</span>
+              </div>
+              <span class="movie-year-text">2005</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/vIKxFQZZ2nomAGaHWg5mydw1DQV.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">True Lies</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">1994</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/rLOk4z9zL1tTukIYV56P94aZXKk.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">A Few Good Men</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">1992</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/r2r3n2EL8R4rGvdrJVsm8aSPmxM.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Pulp Fiction</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 8.9</span>
+              </div>
+              <span class="movie-year-text">1994</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/tlu71AgaL3EQBBCNGsAwZLPbV5D.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Fresh</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 7.9</span>
+              </div>
+              <span class="movie-year-text">2022</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/8xC6QSyxrpm0D5A6iyHNemEWBVe.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Freaky</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 4.8</span>
+              </div>
+              <span class="movie-year-text">2020</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/aDlWqnAP9WTo64L2QlBvs21ESde.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Barbie</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 9.0</span>
+              </div>
+              <span class="movie-year-text">2023</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/p1gebECYECqjfoxBe9SEz3j1yJk.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Barbarian</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 7.8</span>
+              </div>
+              <span class="movie-year-text">2022</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/1QwIIAZzPgYcninV2tiy0cabbhI.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Dawn of the living dead</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 7.9</span>
+              </div>
+              <span class="movie-year-text">2004</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/3a4VodonsYOkPNPQOuh4E758a6L.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Secret Window</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">2004</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/z70Dnu7gKgawChQWS2ZfDF0LK1T.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Saw</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 9.2</span>
+              </div>
+              <span class="movie-year-text">2004</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/t64rAop7eb285wTGw2TnPc7TBnk.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Saw II</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 9.7</span>
+              </div>
+              <span class="movie-year-text">2005</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/pZCa8WgnP0AgVHsFjvuUDhcNjOJ.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Mission: Impossible - Dead Reckoning</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 8.3</span>
+              </div>
+              <span class="movie-year-text">2023</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Spider-Man: Across the Spider-Verse</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 10.0</span>
+              </div>
+              <span class="movie-year-text">2023</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/aAngiE34BMFDTOXpjc04Lr8zsX1.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Fast X</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 8.0</span>
+              </div>
+              <span class="movie-year-text">2023</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/gPbM0MK8CP8A174rmUwGsADNYKD.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Transformers: Rise Of The Beasts</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 8.3</span>
+              </div>
+              <span class="movie-year-text">2023</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="https://www.themoviedb.org/t/p/original/aPqcQwu4VGEewPhagWNncDbJ9Xp.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Smile</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">User Rating: 3.5</span>
+              </div>
+              <span class="movie-year-text">2022</span>
+            </div>
+            <div class="action-circle">
+              <a href="#" class="icon AddFavorite">
+                <div class="tooltip">Add to Favorite</div>
+                <span><i class="fa-solid fa-heart-circle-plus"></i></span>
+              </a>
+              <a href="#" class="icon RateIt">
+                <div class="tooltip">Rate It</div>
+                <span><i class="fa-solid fa-star"></i></span>
+              </a>
+              <a href="#" class="icon watchlist">
+                <div class="tooltip">Add to Watchlist</div>
+                <span><i class="bx bx-list-plus"></i></span>
+              </a>
+              <a href="https://www.youtube.com" class="icon youtube">
+                <div class="tooltip">Play Trailer</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Add more movie items as needed -->
+      </div>
+      <div class="youtube-overlay">
+        <div class="youtube-player-popup">
+          <iframe
+            src="https://www.youtube.com/embed/uYPbbksJxIg"
+            title="Oppenheimer | New Trailer"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <p>
+          &copy; 2023 MovieNights by Mirzac Nicolae & Alexandru Donoaga. All
+          rights reserved.
+        </p>
+        <p></p>
+        <p><a href="#">Terms of Service</a></p>
+      </div>
+    </footer>
+
+    <!-- carusell functionality -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./JS/darkMode.js"></script>
+
+    <script src="./JS/spotlightEffect.js"></script>
+
+    <script src="./JS/typingEffect.js"></script>
+
+    <script src="./JS/indexYT.js"></script>
+
+    <script src="./JS/iconFunctions.js"></script>
+
+    <script src="./JS/ratingSystem.js"></script>
+
+    <script src="./JS/ratingPopUp.js"></script>
+  </body>
+</html>

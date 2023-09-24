@@ -1,0 +1,680 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&display=swap");
+@font-face {
+  font-family: "Header";
+  src: url(Fonts/Lobster-Regular.ttf);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #101010 !important;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper-container {
+  position: absolute; /* Set the container to absolute position */
+  top: 50%; /* Move it to the vertical center */
+  left: 50%; /* Move it to the horizontal center */
+  transform: translate(-50%, -50%); /* Center the container perfectly */
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Ultra&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&display=swap");
+@font-face {
+  font-family: "Header";
+  src: url(Fonts/Lobster-Regular.ttf);
+}
+
+/*-------------------------------Start Side Scroll------------------------------------------- */
+
+html {
+  scrollbar-width: normal;
+  scrollbar-color: #777 #0000002a;
+}
+
+html::-webkit-scrollbar {
+  width: 4px;
+  background-color: #02090d;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #7775;
+  border-radius: 18px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #777;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #5555;
+}
+
+html::-webkit-scrollbar-track:hover {
+  background-color: #555;
+}
+
+/*-----------------------------End Side Scroll------------------------------------------- */
+
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  background-color: var(--body-color);
+}
+/* ===== Google Font Import - Poppins ===== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* ===== Colours ===== */
+:root {
+  --body-color: #f7f7f7;
+  --nav-color: #17181c;
+  --side-nav: #17181c;
+  --text-color: #17181c;
+  --navtext-color: #ffffff96;
+  --search-bar: #f2f2f2;
+  --search-text: #17181c;
+  --movie-item-color: #ffffff;
+}
+
+body.dark {
+  --body-color: #101010;
+  --nav-color: #17181c;
+  --side-nav: #17181c;
+  --text-color: #ffffff;
+  --text-color-nav: #ffffff96;
+  --search-bar: #242526;
+  --movie-item-color: transparent;
+}
+
+nav {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  background-color: var(--nav-color);
+  z-index: 100;
+}
+
+nav .nav-bar {
+  position: relative;
+  height: 100%;
+  max-width: 1570px;
+  width: 100%;
+  background-color: var(--nav-color);
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .nav-bar .sidebarOpen {
+  color: var(--navtext-color);
+  font-size: 25px;
+  padding: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+nav .nav-bar .logo a {
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--navtext-color);
+  text-decoration: none;
+}
+
+.menu .logo-toggle {
+  display: none;
+}
+
+.nav-bar .nav-links {
+  display: flex;
+}
+
+.nav-bar .nav-links i {
+  margin-right: 1rem;
+  font-size: 22px;
+  display: none;
+}
+
+.nav-bar .nav-links li {
+  margin: 0 20px;
+  list-style: none;
+}
+
+body > nav > div > div.menu > ul {
+  margin-bottom: 0;
+}
+
+.nav-links li a {
+  position: relative;
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--navtext-color);
+  text-decoration: none;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 3px;
+}
+
+.nav-links li a::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: var(--navtext-color);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-links li:hover a::before {
+  opacity: 1;
+}
+
+.nav-links li {
+  display: flex;
+}
+
+.nav-bar .darkLight-searchBox {
+  display: flex;
+  align-items: center;
+}
+
+.darkLight-searchBox .dark-light,
+.darkLight-searchBox .searchToggle {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+}
+
+.dark-light i,
+.searchToggle i {
+  position: absolute;
+  color: var(--navtext-color);
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dark-light i.sun {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dark-light.active i.sun {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dark-light.active i.moon {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.searchToggle i.cancel {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.searchToggle.active i.cancel {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.searchToggle.active i.search {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.searchBox {
+  position: relative;
+}
+
+.searchBox .search-field {
+  position: absolute;
+  bottom: -85px;
+  right: 5px;
+  height: 50px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  background-color: var(--nav-color);
+  padding: 3px;
+  border-radius: 6px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.searchToggle.active ~ .search-field {
+  bottom: -74px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.search-field::before {
+  content: "";
+  position: absolute;
+  right: 14px;
+  top: -4px;
+  height: 12px;
+  width: 12px;
+  background-color: var(--nav-color);
+  transform: rotate(-45deg);
+  z-index: -1;
+}
+
+.search-field input {
+  height: 100%;
+  width: 100%;
+  padding: 0 45px 0 15px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--search-text);
+  background-color: var(--search-bar);
+}
+
+body.dark .search-field input {
+  color: var(--text-color);
+}
+
+.search-field i {
+  position: absolute;
+  color: var(--nav-color);
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+body.dark .search-field i {
+  color: var(--text-color);
+}
+
+@media (max-width: 1200px) {
+  .nav-bar .nav-links i {
+    display: inline-block;
+  }
+  body > nav > div > div.menu > ul {
+    padding: 0;
+  }
+
+  nav .nav-bar {
+    padding: 0 15px;
+  }
+  nav .nav-bar .sidebarOpen {
+    display: block;
+  }
+
+  .menu {
+    position: fixed;
+    height: 100%;
+    width: 320px;
+    left: -100%;
+    top: 0;
+    padding: 20px;
+    background-color: var(--side-nav);
+    z-index: 100;
+    transition: all 0.4s ease;
+  }
+
+  nav.active .menu {
+    left: -0%;
+  }
+
+  nav.active .nav-bar .navLogo a {
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  .menu .logo-toggle {
+    display: block;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo-toggle .siderbarClose {
+    color: var(--navtext-color);
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .nav-bar .nav-links {
+    flex-direction: column;
+    padding-top: 30px;
+  }
+
+  .nav-links li a {
+    display: block;
+    margin-top: 20px;
+  }
+}
+.user-pic {
+  width: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 10px;
+  border: 2px solid rgb(46, 46, 46);
+}
+
+.sub-menu-wrap {
+  position: absolute;
+  top: 92%;
+  right: 0.5%;
+  width: 290px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.4s;
+  z-index: 1; /* Set a higher z-index to ensure the dropdown menu appears on top */
+}
+.sub-menu-wrap.open-menu {
+  max-height: 500px;
+}
+
+.sub-menu {
+  background: #17181cfb;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 18px;
+}
+
+.user-info {
+  position: relative;
+  font-family: "Konkhmer Sleokchher", cursive;
+  color: #fff;
+  word-spacing: 5px;
+}
+.user-info h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.user-info h3 {
+  font-weight: 500;
+}
+
+.user-info img {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  margin-right: 15px;
+  margin-left: 73px;
+}
+
+.sub-menu hr {
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background: #ccc;
+  margin: 15px 0 10px;
+}
+
+.sub-menu-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  margin: 12px 0;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+}
+
+.sub-menu-link p {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.sub-menu-link img {
+  width: 40px;
+  background: #e5e5e5;
+  border-radius: 50%;
+  padding: 8px;
+  margin-right: 15px;
+}
+.sub-menu-link span {
+  font-size: 22px;
+  transition: transform 0.5s;
+}
+.sub-menu-link:hover span {
+  transform: translateX(5px);
+}
+
+.sub-menu-link:hover p {
+  font-weight: 600;
+}
+
+.welcome-box {
+  padding-top: 180px;
+  background: url(./images/Backgrounds/movieposter.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+}
+
+.welcome-box img {
+  filter: blur(50px);
+}
+
+.welcom-container {
+  width: auto;
+  margin-top: 0;
+}
+
+.welcome-text {
+  font-size: 32px;
+  font-family: "Konkhmer Sleokchher", cursive;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.welcome-text p {
+  margin-bottom: 0;
+}
+
+.wrapper {
+  width: 600px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  color: white;
+  border-radius: 12px;
+  padding: 30px 40px;
+  position: relative;
+  align-content: center;
+  display: flex;
+  align-items: center;
+  scale: 1.13;
+  box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.409);
+}
+
+.wrapper form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.wrapper h1 {
+  font-size: 36px;
+  text-align: center;
+  background: linear-gradient(to right, #757f9a, #d7dde8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 0;
+}
+
+.wrapper .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 13px 0;
+}
+
+.wrapper .input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.676);
+  border-radius: 14px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+
+.wrapper .input-box input::placeholder {
+  color: #ffffff;
+}
+
+.input-box i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+.Change-Password {
+  display: flex;
+  align-items: left;
+}
+
+.icon-container {
+  margin-right: 10px;
+}
+
+.wrapper .user-photo-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align the items to the right side */
+  color: #fff;
+  font-size: 16px;
+  margin-top: 50px;
+}
+
+.user-photo-box img {
+  margin-top: px;
+}
+
+.wrapper .user-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 12%;
+  margin-bottom: 10px;
+}
+.user-name,
+.user-joined {
+  margin: 0;
+  justify-content: center;
+}
+
+.bio-container {
+  width: 200px;
+  margin-top: 15px;
+}
+
+.bio-container p {
+  text-align: center;
+}
+
+.wrapper .Change-Password {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5;
+  margin: -5px 0 15px;
+}
+
+.Change-Password label input {
+  accent-color: #fff;
+  margin-right: 3px;
+}
+
+.Change-Password a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.Change-Password a:hover {
+  text-decoration: underline;
+}
+
+.wrapper .btn {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+.wrapper .btn:hover {
+  background-color: #900d09;
+  color: #fff;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.219),
+    0 0 20px rgba(255, 255, 255, 0.114), 0 0 30px rgba(255, 255, 255, 0.1);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.wrapper .btn:focus,
+.wrapper .btn:active {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: #101010; /* Set a light background color */
+  padding: 20px;
+  text-align: center;
+  color: #888787; /* Set the text color to be visible */
+}
+
+.footer p {
+  margin: 0;
+}

@@ -729,7 +729,7 @@ body.dark .search-field i {
 
 @media (max-width: 580px) {
   .movie-item {
-    min-width: 185px;
+    min-width: 180px;
     height: 281px;
   }
   .movie-poster {

@@ -723,13 +723,13 @@ body.dark .search-field i {
 
   #movie-list {
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 12px;
+    gap: 10px;
   }
 }
 
 @media (max-width: 580px) {
   .movie-item {
-    min-width: 180px;
+    min-width: 175px;
     height: 281px;
   }
   .movie-poster {

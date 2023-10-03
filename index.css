@@ -39,9 +39,7 @@ body {
   height: 100vh;
   background-color: var(--body-color);
 }
-/* ===== Google Font Import - Poppins ===== */
 
-/* ===== Colours ===== */
 :root {
   --body-color: #f7f7f7;
   --nav-color: #17181c;
@@ -51,6 +49,8 @@ body {
   --search-bar: #f2f2f2;
   --search-text: #17181c;
   --movie-item-color: #ffffff;
+  --new-lable: #900d09;
+  --new-label-text: #fff;
 }
 
 body.dark {
@@ -61,6 +61,8 @@ body.dark {
   --text-color-nav: #ffffff96;
   --search-bar: #242526;
   --movie-item-color: transparent;
+  --new-lable: #ffffff;
+  --new-label-text: #900d09;
 }
 
 nav {
@@ -681,10 +683,58 @@ h1 {
   justify-content: center;
   margin-left: 1rem;
 }
+.new-label {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  border-radius: 4px;
+  color: var(--new-label-text);
+  background: var(--new-lable);
+  padding: 1.5px 4.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 2px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 12px 8px,
+    rgba(0, 0, 0, 0.09) 0px 30px 16px;
+}
+.new-label p {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 840px) {
+  .movie-item {
+    min-width: 240px;
+    height: 350px;
+  }
+  .movie-poster {
+    height: 100%;
+    margin: 0;
+    border-radius: 12px;
+  }
+  h1 {
+    margin-left: 10px;
+    font-size: 26px;
+  }
+  .movie-title {
+    display: none;
+  }
+  .movie-rating {
+    display: none;
+  }
+  .action-circle {
+    display: none !important;
+  }
+}
 
 @media (max-width: 767px) {
   .container {
-    padding: 10px;
+    padding: 7px;
   }
 
   #movie-list {
@@ -712,6 +762,13 @@ h1 {
   }
   .action-circle {
     display: none !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .movie-item {
+    min-width: 170px;
+    height: 270px;
   }
 }
 
@@ -1038,4 +1095,37 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.pagination {
+  margin-top: 1.5rem;
+}
+/* Target the page link inside the pagination */
+.pagination .page-link {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  border: 1px solid #888787;
+  z-index: -10;
+}
+
+/* Target the "Previous" and "Next" buttons */
+.pagination .page-item.disabled .page-link {
+  background-color: var(--body-color);
+  color: var(--text-color);
+
+  border: 1px solid #888787;
+}
+
+/* Hover effect for the page links */
+.pagination .page-link:hover {
+  background-color: #900d09;
+  color: white;
+  border: 1px solid black;
+}
+
+/* Active page link */
+.pagination .page-item.active .page-link {
+  background-color: #900d09;
+  color: var(--text-color);
+  border: 1px solid black;
 }

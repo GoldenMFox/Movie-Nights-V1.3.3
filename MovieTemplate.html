@@ -14,8 +14,9 @@
     <!-- Link Swiper's CSS -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     />
+
     <!-- Swiper  -->
 
     <link rel="stylesheet" href="MovieTemplateStyle.css" />
@@ -106,17 +107,30 @@
               <hr />
 
               <a href="ProfilePage.html" class="sub-menu-link">
-                <img src="profile-menu-img/profile.png" />
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/666/666201.png"
+                />
                 <p>Profile</p>
                 <span>></span>
               </a>
               <a href="#" class="sub-menu-link">
-                <img src="profile-menu-img/setting.png" />
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/3524/3524659.png"
+                />
                 <p>Setting</p>
                 <span>></span>
               </a>
+              <a href="ContactUs.html" class="sub-menu-link">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/7269/7269995.png"
+                />
+                <p>Contact Us</p>
+                <span>></span>
+              </a>
               <a href="#" class="sub-menu-link">
-                <img src="profile-menu-img/logout.png" />
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/56/56805.png"
+                />
                 <p>Logout</p>
                 <span>></span>
               </a>
@@ -219,10 +233,12 @@
                   ></iframe>
                 </div>
               </div>
-              <div class="playTrailer">
-                <i class="fa-solid fa-play" style="color: #ffffff"></i>
-                <h3>Play Trailer</h3>
-              </div>
+              <button class="btn">
+                <div class="playTrailer">
+                  <i class="fa-solid fa-play"></i>
+                  <h3>Play Trailer</h3>
+                </div>
+              </button>
             </div>
             <div class="overview">
               <div class="overview-title">
@@ -234,9 +250,7 @@
                   Oppenheimer, the scientist who led the Manhattan Project to
                   develop the atomic bomb during World War II. The film explores
                   the moral and ethical dilemmas that Oppenheimer faced as he
-                  witnessed the destruction caused by his creation. It is a
-                  story of both triumph and tragedy, as Oppenheimer grapples
-                  with the immense power he has unleashed into the world.
+                  witnessed the destruction caused by his creation.
                 </p>
               </div>
               <div class="director-box">
@@ -249,11 +263,16 @@
               </div>
             </div>
             <div class="distributor">
+              <div class="distrib-title">
+                <p>Streaming Now</p>
+              </div>
               <div class="distributor-list">
                 <div class="distributor-item">
-                  <img
-                    src="https://www.justwatch.com/images/icon/207360008/s100/icon.webp"
-                  />
+                  <a href="">
+                    <img
+                      src="https://www.justwatch.com/images/icon/207360008/s100/icon.webp"
+                    />
+                  </a>
                 </div>
                 <div class="distributor-item">
                   <img src="https://images.justwatch.com/icon/147638351/s100" />
@@ -266,16 +285,6 @@
                     src="https://images.justwatch.com/icon/303391391/s100/icon.webp"
                   />
                 </div>
-                <!--   <div class="distributor-item">
-                  <img src="https://images.justwatch.com/icon/52449861/s100" />
-                </div>
-
-                <div class="distributor-item">
-                  <img src="https://images.justwatch.com/icon/242706661/s100" />
-                </div>
-                <div class="distributor-item">
-                  <img src="https://images.justwatch.com/icon/127445869/s100" />
-                </div> -->
               </div>
             </div>
           </div>
@@ -331,100 +340,227 @@
       <div class="cast-list">
         <div class="cast-box">
           <div class="cast-image-container">
-            <img src=".//images/Cast/cast-murphy.jpg" />
+            <img
+              src="https://www.themoviedb.org/t/p/original/3DZAf9CwXmfV2HZOEdqeZAGTndV.jpg"
+            />
           </div>
           <div class="cast-name">
             <i class="bx bx-male-sign"></i>
             <h3>Cillian Murphy</h3>
           </div>
+          <div class="mobile-cast-name">
+            <i class="bx bx-male-sign"></i>
+            <div class="character">
+              <h3>Cillian Murphy</h3>
+              <p>J. Robert Oppenheimer</p>
+            </div>
+          </div>
         </div>
         <div class="cast-box">
           <div class="cast-image-container">
-            <img src=".//images/Cast/emily.jpg" />
+            <img
+              src="https://www.themoviedb.org/t/p/original/ux9Jd9FcJxUrpTOtWEeAzAukNVu.jpg"
+            />
           </div>
           <div class="cast-name">
             <i class="bx bx-female-sign"></i>
             <h3>Emily Blunt</h3>
           </div>
+          <div class="mobile-cast-name">
+            <i class="bx bx-male-sign"></i>
+            <div class="character">
+              <h3>Emily Blunt</h3>
+              <p>Kitty Oppenheimer</p>
+            </div>
+          </div>
         </div>
         <div class="cast-box">
           <div class="cast-image-container">
-            <img src=".//images/Cast/rdjr.jpg" />
+            <img
+              src="https://www.themoviedb.org/t/p/original/3CrShdDQp6aR1GYy8T8zNthrUIW.jpg"
+            />
           </div>
           <div class="cast-name">
             <i class="bx bx-male-sign"></i>
             <h3>Robert Downey Jr.</h3>
           </div>
+          <div class="mobile-cast-name">
+            <i class="bx bx-male-sign"></i>
+            <div class="character">
+              <h3>Robert Downey Jr.</h3>
+              <p>Lewis Strauss</p>
+            </div>
+          </div>
         </div>
         <div class="cast-box">
           <div class="cast-image-container">
-            <img src=".//images/Cast/mat.jpg" />
+            <img
+              src="https://www.themoviedb.org/t/p/original/aCvBXTAR9B1qRjIRzMBYhhbm1fR.jpg"
+            />
           </div>
           <div class="cast-name">
             <i class="bx bx-male-sign"></i>
             <h3>Matt Damon</h3>
           </div>
+          <div class="mobile-cast-name">
+            <i class="bx bx-male-sign"></i>
+            <div class="character">
+              <h3>Matt Damon</h3>
+              <p>Leslie Groves</p>
+            </div>
+          </div>
         </div>
         <div class="cast-box">
           <div class="cast-image-container">
-            <img src=".//images/Cast/florence.jpg" />
+            <img
+              src="https://www.themoviedb.org/t/p/original/dBC4tZU2gYEnzCu764IgEjQMA8M.jpg"
+            />
           </div>
           <div class="cast-name">
             <i class="bx bx-female-sign"></i>
             <h3>Florence Pugh</h3>
           </div>
+          <div class="mobile-cast-name">
+            <i class="bx bx-male-sign"></i>
+            <div class="character">
+              <h3>Florence Pugh</h3>
+              <p>Jean Tatlock</p>
+            </div>
+          </div>
         </div>
         <div class="cast-box">
           <div class="cast-image-container">
-            <img src=".//images/Cast/ramy.jpg" />
+            <img
+              src="https://www.themoviedb.org/t/p/original/zvBCjFmedqXRqa45jlLf6vBd9Nt.jpg"
+            />
           </div>
           <div class="cast-name">
             <i class="bx bx-male-sign"></i>
             <h3>Rami Malek</h3>
+          </div>
+          <div class="mobile-cast-name">
+            <i class="bx bx-male-sign"></i>
+            <div class="character">
+              <h3>Rami Malek</h3>
+              <p>David Hill</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <div class="recomandation-container">
-      <h1>Recommendations</h1>
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./images/Landscape/avatar.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/Landscape/luci.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/Landscape/one.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/Landscape/nun.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/Landscape/galaxy.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/Landscape/bluebittle.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/Landscape/extr.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/Landscape/after.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/Landscape/spider.jpg" alt="" />
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
+      <h1>Recommended</h1>
+      <div class="wrapper-c">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <ul class="carousel">
+          <li class="card">
+            <a href="./MovieTemplate.html">
+              <img
+                src="https://www.themoviedb.org/t/p/original/zYlgqIpqJ1VAbvFhRhktAzIybVs.jpg"
+              />
+            </a>
+            <div class="recom-title">
+              <p>No one will save you</p>
+              <p>84%</p>
+            </div>
+          </li>
+          <li class="card">
+            <a href="MovieTemplate.html">
+              <img
+                src="https://www.themoviedb.org/t/p/original/4DxHcIQfw3ungfQVqupJ8K62M3d.jpg"
+              />
+            </a>
+            <div class="recom-title">
+              <p>The Continental: From the World of John Wick</p>
+              <p>75%</p>
+            </div>
+          </li>
+          <li class="card">
+            <a href="#">
+              <img
+                src="https://www.themoviedb.org/t/p/original/rMvPXy8PUjj1o8o1pzgQbdNCsvj.jpg"
+              />
+            </a>
+            <div class="recom-title">
+              <p>Expend4bles</p>
+              <p>68%</p>
+            </div>
+          </li>
+          <li class="card">
+            <a href="#">
+              <img
+                src="https://www.themoviedb.org/t/p/original/r8d8R9QbWVQfRV2HfsVZjiWYoHc.jpg"
+              />
+            </a>
+            <div class="recom-title">
+              <p>No one will save you</p>
+              <p>54%</p>
+            </div>
+          </li>
+          <li class="card">
+            <a href="#">
+              <img
+                src="https://www.themoviedb.org/t/p/original/d2Fb6F7Srg2u2gSWuZGquFfoEf5.jpg"
+              />
+            </a>
+            <div class="recom-title">
+              <p>No one will save you</p>
+              <p>50%</p>
+            </div>
+          </li>
+          <li class="card">
+            <a href="#">
+              <img
+                src="https://www.themoviedb.org/t/p/original/ejz14Xwvftn8vCTA0dAh5rlGOmU.jpg"
+              />
+            </a>
+            <div class="recom-title">
+              <p>No one will save you</p>
+              <p>43%</p>
+            </div>
+          </li>
+          <li class="card">
+            <a href="#">
+              <img
+                src="https://www.themoviedb.org/t/p/original/pTsgM3uXgECn5bGQbrRqkpIXkGE.jpg"
+              />
+            </a>
+            <div class="recom-title">
+              <p>No one will save you</p>
+              <p>21%</p>
+            </div>
+          </li>
+          <li class="card">
+            <a href="#">
+              <img
+                src="https://www.themoviedb.org/t/p/original/ftgsUVO4qsgaFkcnV1TEMXYhP3n.jpg"
+              />
+            </a>
+            <div class="recom-title">
+              <p>No one will save you</p>
+              <p>37%</p>
+            </div>
+          </li>
+        </ul>
+        <i id="right" class="fa-solid fa-angle-right"></i>
       </div>
     </div>
 
+    <footer class="footer">
+      <div class="footer-container">
+        <p>
+          &copy; 2023 MovieNights by Mirzac Nicolae & Alexandru Donoaga. All
+          rights reserved.
+        </p>
+        <p></p>
+        <p><a href="#">Terms of Service</a></p>
+      </div>
+    </footer>
+    <!-- Rate progress Circle scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+    <!-- Rate progress Circle scripts -->
 
     <script src="./JS/progressCirclePublic.js"></script>
 
@@ -442,29 +578,6 @@
 
     <script src="./JS/ratingPopUp.js"></script>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 4,
-        spaceBetween: 15,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-    </script>
+    <script src="./JS/centerCarusel.js"></script>
   </body>
-  <footer class="footer">
-    <div class="footer-container">
-      <p>
-        &copy; 2023 MovieNights by Mirzac Nicolae & Alexandru Donoaga. All
-        rights reserved.
-      </p>
-      <p></p>
-      <p><a href="#">Terms of Service</a></p>
-    </div>
-  </footer>
 </html>

@@ -443,22 +443,15 @@ body.dark .search-field i {
   width: 100%;
   position: relative;
   overflow: hidden;
-  border: 2px solid rgb(0, 0, 0);
   box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.409);
-  border-radius: 12px;
+  border-radius: 14px;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   -webkit-transition-property: box-shadow, transform;
   transition-property: box-shadow, transform;
 }
 
-.carousel-inner {
-  height: auto;
-}
-
-.carousel:hover,
-.carousel:focus,
-.carousel:active {
+.carousel:hover {
   box-shadow: 0 0 20 px rgba(0, 0, 0, 0.5);
   -webkit-transform: scale(1);
   transform: scale(1.003);
@@ -471,9 +464,7 @@ body.dark .search-field i {
 }
 
 .carousel-slide {
-  width: 56.25vmin; /* 16:9 ratio */
-  height: 0;
-  padding-bottom: 56.25%; /* 9/16 = 0.5625 or 56.25% */
+  padding-bottom: 56.25%; /* 9/16*/
   flex-shrink: 0;
   position: relative;
 }
@@ -485,9 +476,6 @@ body.dark .search-field i {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-.carousel-dark .carousel-indicators [data-bs-target] {
-  background-color: #ffffff;
 }
 
 @keyframes slide {
@@ -699,7 +687,7 @@ h1 {
     rgba(0, 0, 0, 0.09) 0px 30px 16px;
 }
 .new-label p {
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 0.5px;

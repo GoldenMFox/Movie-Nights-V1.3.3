@@ -14,11 +14,8 @@
     <!-- Link Swiper's CSS -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
     />
-
-    <!-- Swiper  -->
-
     <link rel="stylesheet" href="MovieTemplateStyle.css" />
     <title>Movie Template Page</title>
   </head>
@@ -356,6 +353,7 @@
             </div>
           </div>
         </div>
+
         <div class="cast-box">
           <div class="cast-image-container">
             <img
@@ -445,6 +443,120 @@
               <p>David Hill</p>
             </div>
           </div>
+        </div>
+
+        <div class="cast-box">
+          <div class="cast-image-container">
+            <img
+              src="https://www.themoviedb.org/t/p/original/9JS3PeypxTmHVXOnLCMRzJzySxO.jpg"
+            />
+          </div>
+          <div class="cast-name">
+            <i class="bx bx-male-sign"></i>
+            <h3>Cillian Murphy</h3>
+          </div>
+          <div class="mobile-cast-name">
+            <i class="bx bx-male-sign"></i>
+            <div class="character">
+              <h3>Josh Hartnett</h3>
+              <p>Ernest Lawrence</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cast-box">
+          <div class="cast-image-container">
+            <img
+              src="https://www.themoviedb.org/t/p/original/vD5MtCjHPHpmU9XNn74EPGMHT7o.jpg"
+            />
+          </div>
+          <div class="cast-name">
+            <i class="bx bx-male-sign"></i>
+            <h3>Casey Affleck</h3>
+          </div>
+          <div class="mobile-cast-name">
+            <i class="bx bx-male-sign"></i>
+            <div class="character">
+              <h3>Cillian Murphy</h3>
+              <p>Boris Pash</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cast-box">
+          <div class="cast-image-container">
+            <img
+              src="https://www.themoviedb.org/t/p/original/AbCqqFxNi5w3nDUFdQt0DGMFh5H.jpg"
+            />
+          </div>
+          <div class="cast-name">
+            <i class="bx bx-male-sign"></i>
+            <h3>Kenneth Branagh</h3>
+          </div>
+          <div class="mobile-cast-name">
+            <i class="bx bx-male-sign"></i>
+            <div class="character">
+              <h3>Kenneth Branagh</h3>
+              <p>Niels Bohr</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="clips">
+      <h1>Media Clips & Videos</h1>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="image__wrapper">
+              <img
+                src="https://www.themoviedb.org/t/p/original/gvxIwYmDiQUwpitYyQoaE2kKfPS.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="image__wrapper">
+              <img
+                src="https://www.themoviedb.org/t/p/original/waBWlJlMpyFb7STkFHfFvJKgwww.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="image__wrapper">
+              <img
+                src="https://www.themoviedb.org/t/p/original/tzqegi5m05VEFGmUX4Uk9xsSE1P.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="image__wrapper">
+              <img
+                src="https://www.themoviedb.org/t/p/original/gaEijhHFcurbuoxO4n8yli9XUUC.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="image__wrapper">
+              <img
+                src="https://www.themoviedb.org/t/p/original/iQcCAm8hKWZyUntqrvzyEGtXyJl.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
       </div>
     </div>
@@ -553,15 +665,14 @@
           &copy; 2023 MovieNights by Mirzac Nicolae & Alexandru Donoaga. All
           rights reserved.
         </p>
-        <p></p>
         <p><a href="#">Terms of Service</a></p>
       </div>
     </footer>
+
     <!-- Rate progress Circle scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
     <!-- Rate progress Circle scripts -->
-
     <script src="./JS/progressCirclePublic.js"></script>
 
     <script src="./JS/progressCirclePersonal.js"></script>
@@ -579,5 +690,9 @@
     <script src="./JS/ratingPopUp.js"></script>
 
     <script src="./JS/centerCarusel.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./JS/swiper.js"></script>
   </body>
 </html>

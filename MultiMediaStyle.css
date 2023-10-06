@@ -40,6 +40,8 @@ html::-webkit-scrollbar-track:hover {
   --search-bar: #f2f2f2;
   --search-text: #17181c;
   --movie-item-color: #ffffff;
+  --new-lable: #900d09;
+  --new-label-text: #fff;
 }
 body.dark {
   --body-color: #101010;
@@ -49,6 +51,8 @@ body.dark {
   --text-color-nav: #ffffff96;
   --search-bar: #242526;
   --movie-item-color: transparent;
+  --new-lable: #ffffff;
+  --new-label-text: #900d09;
 }
 /* ===== Colours ===== */
 
@@ -669,6 +673,29 @@ body.dark .search-field i {
 
 #movie-list:hover > .movie-item::after {
   opacity: 1;
+}
+.new-label {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  border-radius: 4px;
+  color: var(--new-label-text);
+  background: var(--new-lable);
+  padding: 1.5px 4.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 2px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 12px 8px,
+    rgba(0, 0, 0, 0.09) 0px 30px 16px;
+}
+.new-label p {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin: 0;
+  padding: 0;
 }
 
 .movie-item {
@@ -1370,14 +1397,13 @@ body > nav:nth-child(3) > ul {
   margin-top: 25px;
 }
 .pagination {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 /* Target the page link inside the pagination */
 .pagination .page-link {
   background-color: var(--body-color);
   color: var(--text-color);
   border: 1px solid #888787;
-  z-index: -10;
 }
 
 /* Target the "Previous" and "Next" buttons */

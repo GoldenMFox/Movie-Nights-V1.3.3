@@ -508,7 +508,6 @@ h1 {
   margin-top: 20px;
   color: var(--text-color);
 }
-
 #movie-list {
   display: flex;
   flex-wrap: wrap;
@@ -528,7 +527,6 @@ h1 {
   border-radius: 12px 12px 12px 12px;
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -536,11 +534,11 @@ h1 {
   transition-duration: 0.3s;
   -webkit-transition-property: box-shadow, transform;
   transition-property: box-shadow, transform;
-  display: flex;
   height: 525px;
   flex-direction: column;
   position: relative;
-  min-width: 280px;
+  min-width: 264px;
+  transition: 0.2s;
 }
 
 .movie-item:hover::before {
@@ -602,11 +600,11 @@ h1 {
   font-weight: bold;
   color: var(--text-color);
   display: flex;
-  flex-direction: column; /* Display the title as a column */
+  flex-direction: column;
   justify-content: center;
-  align-items: center; /* Set a fixed height for the container */
-  height: 45px; /* Adjust this value as needed */
-  overflow: hidden; /* Hide any overflowing content */
+  align-items: center;
+  height: 45px;
+  overflow: hidden;
   margin-bottom: 0;
 }
 
@@ -627,9 +625,9 @@ h1 {
 .movie-poster {
   cursor: pointer;
   margin-bottom: 5px;
-  height: 375px; /* Set a fixed height for the movie posters */
-  object-fit: cover; /* Ensure the images maintain their aspect ratio and cover the container */
+  height: 375px;
   width: 100%;
+  object-fit: cover;
   border-radius: 12px 12px 0px 0px;
 }
 

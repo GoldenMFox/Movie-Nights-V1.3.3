@@ -803,9 +803,9 @@ body.dark .search-field i {
 .movie-poster {
   cursor: pointer;
   margin-bottom: 5px;
-  height: 375px; /* Set a fixed height for the movie posters */
-  object-fit: cover; /* Ensure the images maintain their aspect ratio and cover the container */
+  height: 375px;
   width: 100%;
+  object-fit: cover;
   border-radius: 12px 12px 0px 0px;
 }
 
@@ -916,8 +916,6 @@ body.dark .search-field i {
     height: 270px;
   }
 }
-
-/* ===================================TEST================================= */
 
 .action-circle {
   bottom: 15px;

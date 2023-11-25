@@ -680,8 +680,13 @@ body.dark .search-field i {
   flex: 1;
   text-align: left;
   margin-left: 1.4rem;
+  display: flex;
+  align-items: center;
 }
-
+.movie-rating-text img {
+  margin-right: 0.4rem;
+  height: 18px;
+}
 .ratings-container {
   display: flex;
   flex-direction: column;

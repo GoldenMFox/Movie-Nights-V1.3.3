@@ -49,6 +49,7 @@ body {
   --movie-item-color: #ffffff;
   --new-lable: #900d09;
   --new-label-text: #fff;
+  --text-color-info: #17181c;
 }
 
 body.dark {
@@ -61,6 +62,7 @@ body.dark {
   --movie-item-color: transparent;
   --new-lable: #ffffff;
   --new-label-text: #900d09;
+  --text-color-info: #aeaeae;
 }
 
 nav {
@@ -646,7 +648,7 @@ h1 {
 
 .movie-rating-text {
   font-size: 14px;
-  color: #888;
+  color: var(--text-color-info);
   flex: 1;
   text-align: left;
   margin-left: 1.4rem;
@@ -666,7 +668,7 @@ h1 {
 
 .movie-year-text {
   font-size: 14px;
-  color: #888;
+  color: var(--text-color-info);
   flex: 1;
   text-align: right;
   width: 50%;

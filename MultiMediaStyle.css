@@ -830,6 +830,11 @@ body.dark .search-field i {
   margin-left: 1.4rem;
 }
 
+.movie-rating-text img {
+  margin-right: 0.4rem;
+  height: 18px;
+}
+
 .ratings-container {
   display: flex;
   flex-direction: column;

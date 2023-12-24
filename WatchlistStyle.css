@@ -96,13 +96,6 @@ nav .nav-bar .sidebarOpen {
   display: none;
 }
 
-nav .nav-bar .logo a {
-  font-size: 25px;
-  font-weight: 500;
-  color: var(--navtext-color);
-  text-decoration: none;
-}
-
 .menu .logo-toggle {
   display: none;
 }
